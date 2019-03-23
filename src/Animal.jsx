@@ -21,7 +21,7 @@ class Animal extends Component {
             <button className="down" onClick={() => triggerDownVote(animal)}><FaThumbsDown /></button>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 export default Animal;

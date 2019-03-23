@@ -15,10 +15,7 @@ class App extends Component {
         { type: 'Fish', votes: 2 },
       ]
     };
-
-    this.upVote = this.upVote.bind(this);
-    this.downVote = this.downVote.bind(this);
-  }
+  };
 
   //increases animal vote by 1
   upVote = (animalType) => {
@@ -28,8 +25,8 @@ class App extends Component {
           votes: animal.votes += 1
         })
       }
-    })
-  }
+    });
+  };
 
   //decreases animal vote by 1
   downVote = (animalType) => {
@@ -39,8 +36,8 @@ class App extends Component {
           votes: animal.votes -= 1
         })
       }
-    })
-  }
+    });
+  };
   render() {
     return (
       <div>
@@ -50,6 +47,6 @@ class App extends Component {
         <AnimalList triggerUpVote={this.upVote} triggerDownVote={this.downVote} animals={this.state.animals}/>
       </div>
     );
-  }
-}
+  };
+};
 export default App;
