@@ -13,27 +13,40 @@ html, body {
     margin-top: 100px;
     width: 500px;
     height: 350px;
-    padding: 50px 100px;
+    padding: 50px 50px;
     background-color: #ebeeee;
     border-radius: 20px;
     .animal {
       margin-bottom: 10px;
+      .information {
+        margin-left: 50px;
+      }
+      #number-1 {
+        margin-left: 10px;
+      }
+      #number-1:before {
+        content: "\01F451"; 
+        margin-right: 15px;
+      }
       .vote {
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-        margin-left: 15px;
+        margin-right: 50px;
+        .up, .down {
+          background: none;
+          color: inherit;
+          border: none;
+          padding: 0;
+          font: inherit;
+          cursor: pointer;
+          outline: inherit;
+          margin-left: 15px;
+        }
         .up:hover {
           color: limegreen;
         }
         .down:hover {
           color: red;
         }
-      }
+      }  
     }
   }
 }

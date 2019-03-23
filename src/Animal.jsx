@@ -9,12 +9,16 @@ class Animal extends Component {
     const votes = this.props.votes;
     const triggerUpVote = this.props.triggerUpVote;
     const triggerDownVote = this.props.triggerDownVote;
+
+    //assign number-1 id to animal in the lead 
+    const numberOne = "number-" + (this.props.id);
+
     return (
       <div className="d-flex justify-content-between animal">
-        <div>{animal}: {votes} votes</div>
+        <div id={numberOne} className="information">{animal}: {votes} votes</div>
         <div className="vote">
-            <button className="vote up" onClick={() => triggerUpVote(this.props.animal)}><FaThumbsUp /></button>
-            <button className="vote down" onClick={() => triggerDownVote(this.props.animal)}><FaThumbsDown /></button>
+            <button className="up" onClick={() => triggerUpVote(this.props.animal)}><FaThumbsUp /></button>
+            <button className="down" onClick={() => triggerDownVote(this.props.animal)}><FaThumbsDown /></button>
         </div>
       </div>
     )

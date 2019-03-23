@@ -5,13 +5,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     
+    //initial votes for corresponding animal
     this.state = {
       animals: [
         { type: 'Cat', votes: 11 },
         { type: 'Dog', votes: 9 },
-        { type: 'Bird', votes: 8 },
-        { type: 'Horse', votes: 10 },
-        { type: 'Fish', votes: 6 },
+        { type: 'Bird', votes: 6 },
+        { type: 'Horse', votes: 4 },
+        { type: 'Fish', votes: 2 },
       ]
     };
 
@@ -19,7 +20,8 @@ class App extends Component {
     this.downVote = this.downVote.bind(this);
   }
 
-  upVote = function(animalType) {
+  //increases animal vote by 1
+  upVote = (animalType) => {
     this.state.animals.map((animal) => {
       if (animal.type == animalType) {
         return this.setState({
@@ -28,7 +30,9 @@ class App extends Component {
       }
     })
   }
-  downVote = function(animalType) {
+
+  //decreases animal vote by 1
+  downVote = (animalType) => {
     this.state.animals.map((animal) => {
       if (animal.type == animalType && animal.votes > 0) {
         return this.setState({
@@ -45,7 +49,6 @@ class App extends Component {
         </header>
         <AnimalList triggerUpVote={this.upVote} triggerDownVote={this.downVote} animals={this.state.animals}/>
       </div>
-
     );
   }
 }
