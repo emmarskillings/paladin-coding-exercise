@@ -17,8 +17,8 @@ class Animal extends Component {
       <div className="d-flex justify-content-between animal">
         <div id={numberOne} className="information">{animal}: {votes} votes</div>
         <div className="vote">
-            <button className="up" onClick={() => triggerUpVote(this.props.animal)}><FaThumbsUp /></button>
-            <button className="down" onClick={() => triggerDownVote(this.props.animal)}><FaThumbsDown /></button>
+            <button className="up" onClick={() => triggerUpVote(animal)}><FaThumbsUp /></button>
+            <button className="down" onClick={() => triggerDownVote(animal)}><FaThumbsDown /></button>
         </div>
       </div>
     )
