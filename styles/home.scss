@@ -1,3 +1,39 @@
-h1 {
-  color: tomato;
+html, body {
+  height: 100%;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  h1 {
+    margin-top: 60px;
+  }
+  .container {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 500px;
+    height: 350px;
+    padding: 50px 100px;
+    background-color: #ebeeee;
+    border-radius: 20px;
+    .animal {
+      margin-bottom: 10px;
+      .vote {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        margin-left: 15px;
+        .up:hover {
+          color: limegreen;
+        }
+        .down:hover {
+          color: red;
+        }
+      }
+    }
+  }
 }
